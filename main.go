@@ -30,7 +30,6 @@ func CmdPing(b string, cha chan int, wg *sync.WaitGroup) {
 
 			//fmt.Sprintf("%s:%d",b, p)
 			cmd := exec.Command("cmd", "/c", "ping -n 1 "+address)
-			//						  "bin/bash"
 			var out bytes.Buffer 
 			cmd.Stdout = &out
 			cmd.Run() //运行命令！
@@ -48,7 +47,6 @@ func CmdPing(b string, cha chan int, wg *sync.WaitGroup) {
 
 			//fmt.Sprintf("%s:%d",b, p)
 			cmd := exec.Command("/bin/bash", "/c", "ping -n 1 "+address)
-			//						  "bin/bash"
 			var out bytes.Buffer
 			cmd.Stdout = &out
 			cmd.Run() //运行命令！
